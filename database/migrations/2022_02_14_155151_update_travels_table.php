@@ -17,18 +17,17 @@ class UpdateTravelsTable extends Migration
             $table->string('name', 20);
             $table->string('lastname', 20);
             $table->string('gender', 10);
-            $table->tinyInteger('Age');
-            $table->date('Depart');
-            $table->date('Return');
-            $table->string('City', 20);
-            $table->string('type', 15);
+            $table->tinyInteger('age')->unsigned();
+            $table->date('depart');
+            $table->date('return');
+            $table->string('city', 20);
             $table->string('vehicle', 15);
-            $table->tinyInteger('people');
-            $table->string('telephone', 10);
-            $table->mediumInteger('Ticket Code');
+            $table->tinyInteger('people')->unsigned();
+            $table->string('telephone', 15);
+            $table->BigInteger('ticket_code')->unsigned();
             $table->decimal('price', 10, 2);
             $table->tinyInteger('is_available')->unsigned()->default(1);
-            $table->tinyInteger('private')->unsigned()->default(1);
+            $table->string('private', 20);
         });
     }
 
